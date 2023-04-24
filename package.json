@@ -1,0 +1,12 @@
+{
+  "name": "elixir-boilerplate",
+  "private": true,
+  "engine-strict": true,
+  "engines": {
+    "node": "^18.12",
+    "npm": "^8.19"
+  },
+  "devDependencies": {
+    "accent-cli": "^0.12.0"
+  }
+}
