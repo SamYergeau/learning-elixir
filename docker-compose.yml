@@ -1,23 +1,23 @@
 services:
   application:
-    image: elixir_boilerplate:0.0.1
-    container_name: elixir_boilerplate
+    image: learning_elixir:0.0.1
+    container_name: learning_elixir
     env_file: .env.dev
     environment:
-      - DATABASE_URL=postgres://postgres:development@postgresql/elixir_boilerplate_dev
+      - DATABASE_URL=postgres://postgres:development@postgresql/learning_elixir_dev
     ports:
       - 4000:4000
     depends_on:
       - postgresql
   postgresql:
     image: postgres:14-bullseye
-    container_name: elixir_boilerplate-postgres
+    container_name: learning_elixir-postgres
     environment:
-      - POSTGRES_DB=elixir_boilerplate_dev
+      - POSTGRES_DB=learning_elixir_dev
       - POSTGRES_PASSWORD=development
     ports:
       - 5432:5432
     volumes:
-      - elixir_boilerplate_psql:/var/lib/postgresql/data
+      - learning_elixir_psql:/var/lib/postgresql/data
 volumes:
-  elixir_boilerplate_psql:
+  learning_elixir_psql:
